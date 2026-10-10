@@ -19,27 +19,37 @@ Every manufacturer uses a different key to enter setup (Del, F2, F1, F10, Esc…
 ## How it works
 
 1. Plug the Deck into a USB port on the target PC.
-2. Turn the knob to pick the brand on the OLED, then press the knob to select it.
-3. Restart (or power on) the PC.
+2. Turn the knob to pick your brand on the OLED.
+3. Tap either switch:
+   - **Left switch (`BTN_0` / S4):** Sends **BIOS Setup** keys.
+   - **Right switch (`BTN_1` / S5):** Sends **Boot Menu** keys (to pick a USB installer, drive, etc.).
+   - **Knob push (`ENC_SWT`):** Arms / toggles auto-spam for reboot.
+4. Restart or power on the PC.
 
-The Deck shows up as a normal USB keyboard and keeps sending that brand's setup key while the PC boots, so you land straight in the BIOS.
+The Deck acts as a normal USB keyboard and spams the right key through boot so you don't miss the POST window.
 
-<!-- TODO: describe what the two key switches (BTN_0 / BTN_1) do in the firmware -->
+### Keys by brand
 
-### Typical BIOS keys by brand
-
-<!-- TODO: keep this table in sync with the brand list in the firmware -->
-
-| Brand | Setup key |
-|---|---|
-| ASUS | `Del` (desktop boards), `F2` (laptops) |
-| MSI | `Del` |
-| Gigabyte / AORUS | `Del` |
-| ASRock | `F2` or `Del` |
-| Dell | `F2` |
-| HP | `Esc` then `F10` |
-| Lenovo | `F1` (ThinkPad / ThinkCentre), `F2` (IdeaPad) |
-| Acer | `F2` (`Del` on some desktops) |
+| Brand / Board | BIOS setup | Boot menu | Notes |
+|---|---|---|---|
+| ASUS (Desktop) | `Del` *(or `F2`)* | `F8` | |
+| ASUS (Laptop) | `F2` *(or `Del`)* | `Esc` | |
+| MSI | `Del` | `F11` | |
+| Gigabyte / AORUS | `Del` | `F12` | |
+| ASRock | `Del` or `F2` | `F11` | |
+| Dell / Alienware | `F2` | `F12` | `F12` also has diagnostics |
+| HP | `F10` | `F9` | `Esc` opens startup menu |
+| Lenovo (ThinkPad) | `F1` | `F12` | |
+| Lenovo (IdeaPad) | `F2` | `F12` | |
+| Acer / Predator | `F2` or `Del` | `F12` | Boot menu might need enabling in BIOS |
+| Intel NUC | `F2` | `F10` | |
+| Mini PCs (Beelink, Minisforum) | `Del` | `F7` *(or `F11`)* | |
+| Framework | `F2` | `F12` | |
+| Biostar | `Del` | `F9` | |
+| EVGA | `Del` | `F7` | |
+| Samsung / Toshiba | `F2` | `F12` | |
+| Apple (Intel Mac) | — | Hold `Option` | Startup Manager |
+| Generic / Other | `Del` + `F2` | `F12` | Alternates Del/F2 for unknown boards |
 
 ## Hardware
 
